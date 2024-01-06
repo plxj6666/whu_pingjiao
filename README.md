@@ -29,7 +29,7 @@ pip install -r requirements.txt
 ```
 
 4.运行  
-在工程目录下打开cmd或者powershell，输入python pingjiao.py, 随后输入武汉大学信息门户账号和密码即可，账号，密码的输入均是本地完成，不存在上传或者获取cookie的行为  
+在工程目录下打开```cmd```或者```powershell```，输入```python pingjiao.py```, 随后输入武汉大学信息门户账号和密码即可，账号，密码的输入均是本地完成，不存在上传或者获取cookie的行为  
 ![Alt text](./evaluation/image/image-1.png)
 
 # 其他  
