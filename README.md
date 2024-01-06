@@ -19,7 +19,7 @@ Webdriver 120.0.xxxx(**需要和chrome相匹配**)
 
 2.克隆仓库或者手动download  
 ```
-git clone git@github.com:plxj6666/whu_pingjiao.git
+git clone https://github.com/plxj6666/whu_pingjiao.git
 ```
 
 3.安装依赖  
