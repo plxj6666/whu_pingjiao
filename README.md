@@ -1,6 +1,5 @@
-===========================================/n
-INTRODUCTION
 ===========================================
+INTRODUCTION
 
 # 脚本说明
 1.脚本来自@cycychenyi[https://github.com/cycychenyi],原仓库[https://github.com/cycychenyi/PingJiao]
