@@ -2,7 +2,7 @@
 INTRODUCTION  
 ===========================================  
 # 脚本说明
-1.脚本来自@cycychenyi[https://github.com/cycychenyi],原仓库[https://github.com/cycychenyi/PingJiao]  
+1.脚本来自@cycychenyi[https://github.com/cycychenyi], 原仓库[https://github.com/cycychenyi/PingJiao]  
 2.本人只是在原脚本基础上进行了修改和更新：  
     更新chrome运行版本为 ***120.0.6099.200（正式版本）*** 和WebDriver版本为 ***120.0.6099.199***  
     理论上是向下兼容；  
