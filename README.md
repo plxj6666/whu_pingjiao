@@ -1,6 +1,6 @@
-========================================================
+===========================================
 INTRODUCTION
-========================================================
+===========================================
 
 # 脚本说明
 1.脚本来自@cycychenyi[https://github.com/cycychenyi],原仓库[https://github.com/cycychenyi/PingJiao]
@@ -18,8 +18,8 @@ Webdriver 120.0.xxxx(**需要和chrome相匹配**)
 # 运行方法
 1.安装python
 
-2.克隆仓库
-git clone...
+2.克隆仓库或者手动download
+git clone git@github.com:plxj6666/whu_pingjiao.git
 
 3.安装依赖
 所需库已经在requirements.txt中列出，终端输入（***不需要科学上网***）:
@@ -27,7 +27,7 @@ pip install -r requirements.txt
 
 4.运行
 在工程目录下打开cmd或者powershell，输入python pingjiao.py, 随后输入武汉大学信息门户账号和密码即可，账号，密码的输入均是本地完成，不存在上传或者获取cookie的行为
-![Alt text](./image/image-1.png)
+![Alt text](./evaluation/image/image-1.png)
 
 # 其他
 1.cmd或者powershell运行时可忽略handshake警告，因为代码在使用新版driver创建时没有添加option参数（应该不会有影响）
