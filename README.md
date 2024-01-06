@@ -18,11 +18,15 @@ Webdriver 120.0.xxxx(**需要和chrome相匹配**)
 1.安装python  
 
 2.克隆仓库或者手动download  
-$ git clone git@github.com:plxj6666/whu_pingjiao.git  
+```
+git clone git@github.com:plxj6666/whu_pingjiao.git
+```
 
 3.安装依赖  
 所需库已经在requirements.txt中列出，终端输入（***不需要科学上网***）:  
-$ pip install -r requirements.txt  
+```python
+pip install -r requirements.txt
+```
 
 4.运行  
 在工程目录下打开cmd或者powershell，输入python pingjiao.py, 随后输入武汉大学信息门户账号和密码即可，账号，密码的输入均是本地完成，不存在上传或者获取cookie的行为  
