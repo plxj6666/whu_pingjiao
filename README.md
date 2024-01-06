@@ -23,7 +23,7 @@ git clone git@github.com:plxj6666/whu_pingjiao.git
 ```
 
 3.安装依赖  
-所需库已经在requirements.txt中列出，终端输入（***不需要科学上网***）:  
+所需库已经在requirements.txt中列出，终端输入（***可能需要科学上网***）:  
 ```python
 pip install -r requirements.txt
 ```
