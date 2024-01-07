@@ -13,6 +13,7 @@
 # 运行环境  
 chrome 120.0.xxxx   
 Webdriver 120.0.xxxx(**需要和chrome相匹配**)  
+```Webdriver```已在目录/evaluation/driver存放，包含WINDOWS和MAC
 
 # 运行方法  
 1.安装python  
