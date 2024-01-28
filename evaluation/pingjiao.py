@@ -11,6 +11,8 @@ from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.chrome.service import Service
 from selenium import webdriver
 from selenium.webdriver.common.by import By
+from selenium.common.exceptions import NoSuchElementException
+
 
 
 def init_driver() -> Chrome:
@@ -28,6 +30,14 @@ def init_driver() -> Chrome:
     return driver
 
 
+def is_captcha_present(driver):
+    try:
+        captcha_input = driver.find_element(By.XPATH, '//*[@id="dxcaptcha"]')  # 请替换为验证码输入框的实际XPATH
+        return True
+    except NoSuchElementException:
+        return False
+
+
 def login(driver: Chrome, username: str, password: str) -> bool:
     driver.get('http://s.ugsq.whu.edu.cn/caslogin')
     username_input = driver.find_element(By.XPATH, '//*[@id="username"]')
@@ -36,15 +46,24 @@ def login(driver: Chrome, username: str, password: str) -> bool:
     password_input.send_keys(password)
     login_button = driver.find_element(By.XPATH, '//*[@id="casLoginForm"]/p[2]/button')
     login_button.click()
+    time.sleep(2)
     loginstates = True
-    try:
-        loginstate = driver.find_element(By.XPATH, '//*[@id="casLoginForm"]/*[@id="msg"]').text
-        if loginstate == "您提供的用户名或者密码有误" :
-            loginstates = False
-    except:
-        pass
-    # time.sleep(3)
+    # 检查是否出现验证码
+    if is_captcha_present(driver):
+        print("验证码出现，请手动输入后继续脚本执行。")
+        input("按Enter键继续...")
+    else:
+        print("登录成功，继续执行后续操作。")
+        loginstates = True
+        try:
+            loginstate = driver.find_element(By.XPATH, '//*[@id="casLoginForm"]/*[@id="msg"]').text
+            if loginstate == "您提供的用户名或者密码有误":
+                loginstates = False
+        except:
+            pass
+
     return loginstates
+
 
 def pingjia(driver: Chrome) -> None:
     # 限制不能给满分，第一个选项四星
@@ -67,8 +86,8 @@ def pingjia(driver: Chrome) -> None:
 def pingjia_per_page(driver: Chrome, all_pingjiaed: bool, count: int) -> int:
     # 修改办法，通过INDEX获取未评价的下标
     length = len(driver.find_elements(By.XPATH, '//*[@id="pjkc"]/tr'))
+    kcs = driver.find_elements(By.XPATH, '//*[@id="pjkc"]/tr')  # 重复获取页面，避免出现element刷新
     for i in range(length):
-        kcs = driver.find_elements(By.XPATH, '//*[@id="pjkc"]/tr')  # 重复获取页面，避免出现element刷新
         if not all_pingjiaed:
             break
         # time.sleep(3)
