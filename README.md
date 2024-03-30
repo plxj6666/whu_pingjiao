@@ -3,9 +3,9 @@
 # 脚本说明
 1.脚本来自@cycychenyi[https://github.com/cycychenyi], 原仓库[https://github.com/cycychenyi/PingJiao]  
 2.本人只是在原脚本基础上进行了修改和更新：  
-    更新chrome运行版本为 ***120.0.6099.200（正式版本）*** 和WebDriver版本为 ***120.0.6099.199***  
+    更新chrome运行版本为 **120.0.6099.200（正式版本）** 和WebDriver版本为 **120.0.6099.199**  
     理论上是向下兼容；  
-    更新运行环境中selenium库为 ***4.16.0*** 版本，更新了有关XPATH的元素定位策略  
+    更新运行环境中selenium库为 **4.16.0** 版本，更新了有关XPATH的元素定位策略  
     调整了页面加载时长，防止短时间内重复加载造成element丢失而导致访问失败  
     其它一些小改进......  
 
@@ -23,7 +23,7 @@ git clone https://github.com/plxj6666/whu_pingjiao.git
 ```
 
 3.安装依赖  
-所需库已经在requirements.txt中列出，终端输入（***可能需要科学上网***）:  
+所需库已经在requirements.txt中列出，终端输入（**可能需要科学上网**）:  
 ```python
 pip install -r requirements.txt
 ```
