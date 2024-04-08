@@ -85,15 +85,13 @@ def pingjia(driver: Chrome) -> None:
     close_button.click()
 
 
-my_list = ['黄雄义(00033118)', '刘嘉梅(00030310)']
 def pingjia_per_page(driver: Chrome, all_pingjiaed: bool, count: int) -> int:
     length = len(driver.find_elements(By.XPATH, '//*[@id="pjkc"]/tr'))
     print(length)
     for i in range(1, length + 1):
         if not all_pingjiaed:
             break
-        teacher_name = driver.find_element(By.XPATH, '(//*[@id="pjkc"]/tr)[{}]/td[2]'.format(i)).text
-        if teacher_name in my_list or driver.find_element(By.XPATH, '(//*[@id="pjkc"]/tr)[{}]/td[5]'.format(i)).text == '已评价':  # 查看是否评价
+        if driver.find_element(By.XPATH, '(//*[@id="pjkc"]/tr)[{}]/td[5]'.format(i)).text == '已评价':  # 查看是否评价
             print(f"teacher{teacher_name}已经被评价")
             continue
         driver.find_element(By.XPATH, '(//*[@id="pjkc"]/tr)[{}]/td[6]/a'.format(i)).click()  # 找不到元素
