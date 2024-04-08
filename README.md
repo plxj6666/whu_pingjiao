@@ -1,17 +1,17 @@
-武汉大学评教脚本（2024年春季）
+武汉大学评教脚本（2023-2024学年第二学期）
 = 
 # 脚本说明
 1.脚本来自@cycychenyi[https://github.com/cycychenyi], 原仓库[https://github.com/cycychenyi/PingJiao]  
 2.本人只是在原脚本基础上进行了修改和更新：  
-    更新chrome运行版本为 **120.0.6099.200（正式版本）** 和WebDriver版本为 **120.0.6099.199**  
+    更新chrome运行版本为 **123.0.6312.106（正式版本）** 和WebDriver版本为 **123.0.60xx.xxx**  
     理论上是向下兼容；  
-    更新运行环境中selenium库为 **4.16.0** 版本，更新了有关XPATH的元素定位策略  
+    更新运行环境中selenium库为 **4.19.0** 版本，更新了有关XPATH的元素定位策略  
     调整了页面加载时长，防止短时间内重复加载造成element丢失而导致访问失败  
     其它一些小改进......  
 
 # 运行环境  
-chrome 120.0.xxxx   
-Webdriver 120.0.xxxx(**需要和chrome相匹配**)  
+chrome xxxx.xxxx   
+Webdriver xxxx.xxxx(**需要和chrome相匹配**)  
 ```Webdriver```已在目录/evaluation/driver存放，包含WINDOWS和MAC
 
 # 运行方法  
